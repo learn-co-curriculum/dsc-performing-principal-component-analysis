@@ -89,6 +89,18 @@ where $RowFeatureVector$ is the matrix with the eigenvectors in the columns tran
 
 ### Outcome of the process
 
+
+```python
+np.var(x_avg*-.67787 + y_avg*-.73517)
+```
+
+
+
+
+    1.15560490910904
+
+
+
 This process will give us the original data solely in terms of the vectors we chose. Our original data set had two axes, x and y, so our data was in terms of them. It is possible to express data in terms of any two axes that we like. If these axes are perpendicular, then the expression is the most efficient. This was why it was important that eigenvectors are always perpendicular to each other.
 
 We have changed our data from being in terms of the axes x and y, and now they are in terms of our 2 eigenvectors. In the case of when the new data set has reduced dimensionality, ie. we have left some of the eigenvectors out, the new data is only in terms of the vectors that we decided to keep.
