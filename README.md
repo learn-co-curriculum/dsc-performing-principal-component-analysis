@@ -1,9 +1,9 @@
 
-# Performing Principle Component Analysis (PCA)
+# Performing Principal Component Analysis (PCA)
 
 ## Introduction
 
-In this lesson we shall look at the steps we needed to perform a Principal Components Analysis on a set of data. We shall look at an explanation of what is happening at each point so that we can make informed decisions about when to use this technique.
+In this lesson we shall look at the steps we needed to perform a Principal Components Analysis on a set of data. We will look at an explanation of what is happening at each point so that we can make informed decisions about when to use this technique.
 
 ## Objectives.
 - Understand the steps required to perform PCA on a given dataset
@@ -38,7 +38,7 @@ Since the non-diagonal elements in this covariance matrix are positive, we shoul
 
 ## Step 4: Calculate the eigenvectors and eigenvalues of the covariance matrix
 
-Since the covariance matrix is square, we can calculate the eigenvectors and eigenvalues for this matrix. These are rather important, as they tell us useful information about our data. Here are the EIgenvectors and eigenvalues for above data. Calculating these by hand requires tedious matrix manipulation. We shall soon look at how to do this in python with much ease. 
+Since the covariance matrix is square, we can calculate the eigenvectors and eigenvalues for this matrix. These are rather important, as they tell us useful information about our data. Here are the EIgenvectors and eigenvalues for above data. Calculating these by hand requires tedious matrix manipulation. We'll soon find out how to do this pretty easily in Python. 
 <img src="eigen.png" width=400>
 
 ### So what do they mean? 
@@ -55,7 +55,7 @@ So, by this process of taking the eigenvectors of the covariance matrix, we have
 
 ## Step 5: Choosing components and forming a feature vector
 
-If we look at the eigenvectors and eigenvalues above, we see that the eigenvalues are quite different values. In fact, it turns out that the eigenvector with the highest eigenvalue is the principle component of the data set.
+If we look at the eigenvectors and eigenvalues above, we see that the eigenvalues are quite different values. In fact, it turns out that the eigenvector with the highest eigenvalue is the principal component of the data set.
 In our example, the eigenvector with the larges eigenvalue was the one that pointed down the middle of the data. It is the most significant relationship between the data dimensions.
 
 In general, once eigenvectors are found from the covariance matrix, the next step is to order them by eigenvalue, highest to lowest. This gives us the components in order of significance. We can also decide to ignore the components of lesser significance. We do lose some information in the process, but if the eigenvalues are small, we  don’t lose much. 
@@ -75,7 +75,7 @@ OR, we can choose to leave out the smaller, less significant component and only 
 
 <img src="feat2.png" width=150>
 
-NExt. we shall see the effect of this process on final data.
+Next, we'll see the effect of this process on final data.
 
 ## Step 5: Deriving the new data set
 
