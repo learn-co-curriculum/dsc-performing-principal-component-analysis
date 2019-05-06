@@ -14,7 +14,7 @@ In this lesson we shall look at the steps we needed to perform a Principal Compo
 
 Let's use a simple example for our dataset. Our data only has 2 dimensions, as this will allow to create plots of the data to show what the PCA analysis is doing at each step. The x and y variables in our data as shown below:
 
-<img src="data.png" width=150>
+<img src="images/data.png" width=150>
 
 
 
@@ -23,27 +23,27 @@ Let's use a simple example for our dataset. Our data only has 2 dimensions, as t
 For PCA to work properly, we have to subtract the mean from each of the data dimensions. The mean subtracted is the average across each dimension. So, all the $x$ values
 have $\bar{x}$ (the mean of the $x$ values of all the data points) subtracted, and all the $y$ values
 have $\bar{y}$ subtracted from them. This produces a data set whose mean is zero as shown below:
-<img src="adj.png" width=220>
+<img src="images/adj.png" width=220>
 
 The plot for above data would look like below:
-<img src="plot.png" width=300>
+<img src="images/plot.png" width=300>
 
 ## Step 3: Calculate the covariance matrix
 
 This is done in exactly the same way as was discussed earlier. Since the data is 2 dimensional, the covariance matrix will be 2 x 2 = 4 dimensional. Below is what the covariance matrix for above data would look like:
 
-<img src="cov.png" width=300>
+<img src="images/cov.png" width=300>
 
 Since the non-diagonal elements in this covariance matrix are positive, we should expect that both the x and y variable increase together.
 
 ## Step 4: Calculate the eigenvectors and eigenvalues of the covariance matrix
 
 Since the covariance matrix is square, we can calculate the eigenvectors and eigenvalues for this matrix. These are rather important, as they tell us useful information about our data. Here are the EIgenvectors and eigenvalues for above data. Calculating these by hand requires tedious matrix manipulation. We'll soon find out how to do this pretty easily in Python. 
-<img src="eigen.png" width=400>
+<img src="images/eigen.png" width=400>
 
 ### So what do they mean? 
 
-<img src="EIGENPLOT.png" width=400>
+<img src="images/EIGENPLOT.png" width=400>
 
 If we look at the plot above, the data has quite a strong pattern. As expected from the covariance matrix, they two variables do indeed increase together. On top of the data we have both the eigenvectors as well. They appear as diagonal dotted lines on the plot, perpendicular to each other. 
 
@@ -69,11 +69,11 @@ $$FeatureVector = [eig_1, eig_2, .., eig_n]$$
 
 Given our example set of data, and the fact that we have 2 eigenvectors, we have two choices. We can either form a feature vector with both of the eigenvectors: 
 
-<img src="feat1.png" width=300>
+<img src="images/feat1.png" width=300>
 
 OR, we can choose to leave out the smaller, less significant component and only have a single column: 
 
-<img src="feat2.png" width=150>
+<img src="images/feat2.png" width=150>
 
 Next, we'll see the effect of this process on final data.
 
@@ -108,11 +108,11 @@ We have changed our data from being in terms of the axes x and y, and now they a
 
 The transpose of the result in each case is also taken, to bring the data back to the nice table-like format as shown below:
 
-<img src="transplot.png" width=400>
+<img src="transimages/plot.png" width=400>
 
 The plot below shows the impact of this process on our data. The final transformation is performed with each of the possible feature vectors. The data is plotted with final points to show how they relate to the components.
 
-<img src="transformed.png" width=400>
+<img src="images/transformed.png" width=400>
 
 In the case of keeping both eigenvectors for the transformation, the plot is basically the original data, rotated so that the eigenvectors are the new axes. This is understandable since we have lost no information in
 this decomposition.
@@ -122,7 +122,7 @@ this decomposition.
 ### Reducing Data 
 The other transformation we can make is by taking only the eigenvector with the largest eigenvalue. The table of data resulting from that is shown below. 
 
-<img src="trans3.png" width=250>
+<img src="images/trans3.png" width=250>
 
 
 As
