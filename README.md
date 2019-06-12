@@ -10,7 +10,7 @@ In this lesson, you'll code PCA from the ground up using NumPy. This should prov
 You will be able to:
 
 - Understand the steps required to perform PCA on a given dataset
-- Understand and explain the role of Eigen decomposition in PCA
+- Understand and explain the role of Eigendecomposition in PCA
 
 
 ## Step 1: Get some data
