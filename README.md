@@ -1,4 +1,3 @@
-
 # Performing Principal Component Analysis (PCA)
 
 ## Introduction
@@ -183,7 +182,7 @@ mean_centered.head()
 
 ## Step 3: Calculate the covariance matrix
 
-Now that you have normalized your data, you must calculate the covariance matrix.
+Now that you have normalized your data, you can calculate the covariance matrix.
 
 
 ```python
@@ -201,7 +200,7 @@ cov
 
 ## Step 4: Calculate the eigenvectors and eigenvalues of the covariance matrix
 
-Its time to compute the associated eigenvectors. These will form the new axes when its time to reproject the dataset on the new basis.
+It's time to compute the associated eigenvectors. These will form the new axes when it's time to reproject the dataset on the new basis.
 
 
 ```python
@@ -233,7 +232,7 @@ eigen_value
 
 If you look at the eigenvectors and eigenvalues above, you can see that the eigenvalues have very different values. In fact, it turns out that **the eigenvector with the highest eigenvalue is the principal component of the dataset.**
 
-In general, once eigenvectors are found from the covariance matrix, the next step is to order them by eigenvalue, in descending order. This gives us the components in order of significance. Typically, PCA will be used to reduce the dimensionality of the dataset and, as such, some of these eigenvectors will be subsequently discarded. In general, the smaller the eigenvalue relative to others, the less information encoded within said feature.
+In general, once eigenvectors are found from the covariance matrix, the next step is to order them by eigenvalue in descending order. This gives us the components in order of significance. Typically, PCA will be used to reduce the dimensionality of the dataset and as such, some of these eigenvectors will be subsequently discarded. In general, the smaller the eigenvalue relative to others, the less information encoded within said feature.
 
 Finally, you need to form a __feature vector__, which is just a fancy name for a matrix of vectors. This is constructed by taking the eigenvectors that you want to keep from the list of eigenvectors, and forming a matrix with these eigenvectors in the columns as shown below:
 
